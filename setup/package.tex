@@ -1,0 +1,194 @@
+% !Mode:: "TeX:UTF-8"
+% 文字编码：UTF-8
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   LaTeX File for Doctor (Master) Thesis of Tsinghua University
+%   LaTeX + CJK     清华大学博士（硕士）论文模板
+%   Based on Wang Tianshu's Template for XJTU
+%   Version: 1.51
+%   Last Update: 2004-01-15
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   Copyright 2002-2004  by  Lei Wang (BaconChina)       (bcpub@sina.com)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   LaTeX File for phd thesis of xi'an Jiao Tong University
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   Copyright 2002  by  Wang Tianshu    (tswang@asia.com)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% 引用的宏包和相应的定义
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{graphicx}
+\usepackage[CJKbookmarks=true,
+            bookmarksnumbered=true,
+            bookmarksopen=true,
+            colorlinks=false,
+            citecolor=blue,
+            linkcolor=red,
+            anchorcolor=green,
+            urlcolor=blue
+            ]{hyperref}
+
+
+% 子图的标题
+\usepackage{subcaption}
+
+% 支持彩色
+\usepackage{color}
+
+% 首行缩进宏包
+\usepackage{indentfirst}
+
+% 版面控制宏包，定义规定的版面尺寸 
+% \left = Word模版左侧页边距 = 2.6cm
+% \right = Word模版右侧页边距 = 2.6cm
+% \top = Word模版页边距（上）+ Word第一行文字上边缘距版心上边缘的距离 = 3cm + 0.15cm = 3.15cm
+% \headsep = Word模版页边距（上） - Word模版页眉顶端距离 - Word模版一行页眉的高度 + Word第一行文字上边缘距版心上边缘的距离 = 3cm - 2cm  - 0.75cm + 0.15cm = 0.4cm
+% 注：Word模版一行页眉的高度 略大于 Word模版页眉的行距（20pt）
+
+% \bottom = Word模版页边距（下）= 2.5cm
+% \footskip = Word模版页边距（下） - Word模版页脚底端距离 = 2.5cm - 1.75cm = 0.75cm
+
+\usepackage[a4paper,left=2.6cm,right=2.6cm,top=3.15cm,headsep=0.4cm,headheight=0.75cm,,bottom=2.5cm,footskip=0.75cm,footnotesep=0.6cm]{geometry}
+
+
+
+%数字转化为汉字
+%\usepackage{zhnumber}
+
+
+% AMSLaTeX宏包 用来排出更加漂亮的公式
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+%\newcommand\hmmax{0} % default 3
+%\newcommand\bmmax{2} % default 4
+% 处理数学公式中的黑斜体的宏包
+\usepackage{bm}
+
+
+
+% 不同于\mathcal or \mathfrak 之类的英文花体字体
+%\usepackage{mathrsfs}
+
+% 定理类环境宏包，其中 amsmath 选项用来兼容 AMS LaTeX 的宏包
+\usepackage[amsmath,thmmarks]{ntheorem}
+
+% 因为图形可浮动到当前页的顶部，所以它可能会出现
+% 在它所在文本的前面. 要防止这种情况，可使用 flafter
+% 宏包
+%\usepackage{flafter}
+
+%浮动图形控制宏包
+%允许上一个section的浮动图形出现在下一个section的开始部分
+%该宏包提供处理浮动对象的 \FloatBarrier 命令，使所有未处
+%理的浮动图形立即被处理
+\usepackage[below]{placeins}
+
+% 图文混排用宏包
+%\usepackage{floatflt}
+
+% 图形和表格的控制
+%\usepackage{rotating}
+
+% tex1cm宏包，控制字体的大小
+\usepackage{type1cm}
+
+% 控制标题的宏包
+%\usepackage{titlesec}
+
+% 控制目录的宏包
+\usepackage{titletoc}
+
+
+%可将浮动对象放置到文件的最后
+%\usepackage{endfloat}
+
+% 脚注控制，每页脚注重新编号，每页脚注底部对齐
+\usepackage[perpage,symbol*,bottom]{footmisc}
+
+% fancyhdr宏包 页眉和页脚的相关定义
+\usepackage{fancyhdr}
+\usepackage{fancyref}
+
+% 支持引用的宏包
+\usepackage{cite}
+% 支持引用缩写的宏包
+%\usepackage{natbib}
+%\usepackage{hypernat}
+
+%浮动图形和表格标题样式
+\usepackage{caption} 
+
+% 定制表格和图形的多行标题行距
+\usepackage{setspace}
+
+% 打印当前页面格式的宏包
+%\usepackage{layouts}
+
+% 使用Times字体的宏包
+%\usepackage{times}
+%\usepackage{mathptm}
+%\usepackage[slantedGreek]{mathptmx}
+\usepackage{mathptmx}
+%\usepackage{txfonts}
+
+% use url.sty
+\usepackage{url}
+% 使用跨页表格的宏包
+%\usepackage{supertabular}
+% 生成索引
+\usepackage{makeidx}
+
+%Harvard类型参考文献
+%\usepackage{harvard}
+
+%支持摄氏度等国际单位的宏包
+\usepackage[squaren]{SIunits}
+
+%处理item等环境的宏包，可用inparaenum等
+%\usepackage{paralist}
+%\usepackage{enumitem}
+
+%表格合并多行
+\usepackage{multirow}
+
+%画备注框框需要的宏包
+\usepackage{fancybox}
+
+%显示latex页面设置的宏包
+%\usepackage{showframe}
+
+%pifont宏包含有\ding{}命令，可以在脚注使用带圈的数字，不过由于该字体只有1~10的符号，所以每页脚注不要超过10个。
+\usepackage{pifont}
+
+%pdfpages宏包可以将已有的pdf文件（例如版权声明和原创性声明）加入到文档中
+\usepackage{pdfpages}
+
+%\usepackage{threepartbox}%表格加注释
+
+% 中文支持宏包
+%\usepackage[boldfont,EmboldenFactor=2]{xeCJK}
+\xeCJKsetup{boldfont,EmboldenFactor=2}
+\usepackage{CJKnumb}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\setsansfont{Arial}
+\setCJKmainfont{SimSun}
+\xeCJKsetwidth{[}{0.2em}
+%\CJKsetecglue{}
+
+\NeedsTeXFormat{LaTeX2e}
+
+\DeclareMathAlphabet{\mathsfsl}{OT1}{cmss}{m}{sl}
+%\newcommand{\tensor}[1]{\mathsfsl{#1}}
+%\newcommand{\sub}[1]{_{_{\scriptstyle {#1}}}}
+\newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}

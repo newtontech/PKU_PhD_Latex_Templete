@@ -1,0 +1,556 @@
+% !Mode:: "TeX:UTF-8"
+% 文字编码：UTF-8
+
+% \eqnarray如果很长，影响分栏、换行和分页（整块挪动，造成页面空白），
+% 可以设置成为自动调整模式
+\allowdisplaybreaks[4]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%下面这组命令使浮动对象的缺省值稍微宽松一点，从而防止幅度
+%对象占据过多的文本页面，也可以防止在很大空白的浮动页上放置
+%很小的图形。
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\textfraction}{0.15}
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\bottomfraction}{0.65}
+\renewcommand{\floatpagefraction}{0.60}
+
+%公式与正文之间的距离
+\setlength{\abovedisplayskip}{6pt plus 2pt minus 2pt}
+\setlength{\abovedisplayshortskip}{6pt plus 2pt minus 2pt}
+\setlength{\belowdisplayskip}{6pt plus 2pt minus 2pt}
+\setlength{\belowdisplayshortskip}{6pt plus 2pt minus 2pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%下面这组命令可以使公式编号随着每开始新的一节而重新开始。
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\makeatletter      % '@' is now a normail "letter" for TeX
+%\@addtoreset{eqation}{section}
+%\makeatother       % '@' is restored as a "non-letter" character for TeX
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 重定义字体命令
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 注意win2000,没有 simsun,　最好到网上找一个
+% 一些字体是office2000 带的
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setCJKfamilyfont{song}{SimSun}                             %宋体 song
+\newcommand{\song}{\CJKfamily{song}}                        % 宋体   (Windows自带simsun.ttf)
+
+\setCJKfamilyfont{fs}{FangSong}                      %仿宋 fs
+\newcommand{\fs}{\CJKfamily{fs}}                            %仿宋体 (Windows自带simfang.ttf)
+
+\setCJKfamilyfont{kai}{KaiTi}                        %楷体 kai
+\newcommand{\kai}{\CJKfamily{kai}}                        %楷体 (Windows自带simkai.ttf)
+
+\setCJKfamilyfont{yh}{Microsoft YaHei}                    %微软雅黑 yh
+\newcommand{\yh}{\CJKfamily{yh}}
+
+\setCJKfamilyfont{hei}{SimHei}                                    %黑体  hei
+\newcommand{\hei}{\CJKfamily{hei}}                          % 黑体   (Windows自带simhei.ttf)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 重定义字号命令
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newcommand{\typethesis}{\zihao{-0}\hei}      % 封面中的“博士研究生学位论文” 黑体 小初
+\newcommand{\typetitle}{\fontsize{26pt}{50pt}\hei\bfseries\selectfont}     % 封面中的标题内容 黑体加粗 一号, 1.25倍行距
+\newcommand{\typetimu}{\fontsize{22pt}{50pt}\selectfont}     % 封面中的“题目” 宋体 二号, 同一号字体1.25倍行距
+\newcommand{\typename}{\fontsize{16pt}{32pt}\fs\selectfont}         % 封面中的姓名内容 仿宋 三号, 1.25倍行距
+\newcommand{\typexingming}{\fontsize{15pt}{32pt}\hei\selectfont}    % 封面中的“姓名” 黑体 小三, 同三号字体1.25倍行距
+\newcommand{\typedate}{\zihao{3}}         % 封面中的年月 宋体 三号, 1.25倍行距
+
+\newcommand{\typetitleen}{\fontsize{26pt}{48pt}\sffamily\bfseries\selectfont}     % 英文标题内容 Arial 加粗倾斜 一号, 单倍行距
+
+\newcommand{\typeenglish}{\fontsize{16pt}{22pt}\selectfont}         % 英文封面 三号, 20磅行距
+\newcommand{\typeenglishlarge}{\fontsize{16pt}{34pt}\selectfont}         % 英文封面 三号, 20磅行距 加段落间距
+\newcommand{\typetitleab}{\fontsize{16pt}{32pt}\sffamily\selectfont}     % 英文摘要页标题内容 Arial 三号, 单倍行距
+\newcommand{\typeab}{\fontsize{12pt}{12pt}\sffamily\selectfont}     % 英文摘要页ABSTRACT Arial 小四号, 单倍行距
+
+\newcommand{\typetext}{\fontsize{12pt}{20pt}\selectfont}       % 正文  小四, 20 磅
+\newcommand{\typechap}{\zihao{3}\linespread{1.64}\hei}         % “摘要”两字 各章标题 黑体 三号, 单倍行距
+\newcommand{\typesec}{\zihao{4}\linespread{1.2}\hei}          % 各节标题 黑体 四号, 20磅行距
+\newcommand{\typesubsecctex}{\fontsize{13pt}{13pt}\linespread{1.2}\hei} % 二级节标题 黑体 13磅字, 20磅行距
+\newcommand{\typesubsubsecctex}{\fontsize{12pt}{12pt}\linespread{1.2}\hei} % 三级节标题 黑体 12磅字, 20磅行距
+
+
+\newcommand{\typeyemei}{\fontsize{10.5pt}{20pt}\selectfont}      %  页眉 宋体 五号, 20磅行距
+\newcommand{\typeyemeien}{\fontsize{10.5pt}{20pt}\selectfont}      %  页眉 英文 五号, 20磅行距
+\newcommand{\typeyejiao}{\fontsize{10.5pt}{20pt}\selectfont}          %  页脚 英文 五号, 20磅行距
+\newcommand{\typefootnote}{\fontsize{9pt}{15.7pt}\selectfont}          %   脚注 小五号, 单倍行距
+\newcommand{\typefootscript}{\fontsize{8pt}{8pt}\selectfont}          %   脚注上标 小五号, 单倍行距
+\newcommand{\typetable}{\small\renewcommand\arraystretch{1.5}}          %   表的内容 11磅, 单倍行距
+\newcommand{\typebib}{\fontsize{10.5pt}{16pt}\selectfont}      %  参考文献 五号, 16磅行距
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 重定义一些正文相关标题
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\CTEXsetup[format={\typechap\centering},nameformat={\typechap},aftername={\hspace*{1em}},titleformat={\typechap},beforeskip={-2pt},afterskip={24pt}]{chapter}
+\CTEXsetup[format={\typesec},nameformat={\typesec},aftername={\hspace*{1em}},titleformat={\typesec},beforeskip={24pt},afterskip={6pt}]{section}
+\CTEXsetup[format={\typesubsecctex},nameformat={\typesubsecctex},aftername={\hspace*{1em}},titleformat={\typesubsecctex},beforeskip={12pt},afterskip={6pt}]{subsection}
+\CTEXsetup[format={\typesubsubsecctex},nameformat={\typesubsubsecctex},aftername={\hspace*{1em}},titleformat={\typesubsubsecctex},beforeskip={12pt},afterskip={6pt}]{subsubsection}
+
+
+
+\theoremstyle{plain} \theorembodyfont{\song\rmfamily}
+\theoremheaderfont{\hei\rmfamily} \theoremseparator{\ }
+\newtheorem{definition}{\hei 定义}[chapter]
+\newtheorem{proposition}[definition]{\hei 命题}
+\newtheorem{assumption}[definition]{\hei 假设}
+\newtheorem{lemma}[definition]{\hei 引理}
+\newtheorem{remark}[definition]{\hei 注}
+%\newtheorem{theorem}{\hei 定理}[chapter]
+\newtheorem{theorem}[definition]{\hei 定理}
+\newtheorem{axiom}{\hei 公理}
+%\newtheorem{algorithm1}[definition]{\hei 算法}
+\newtheorem{corollary}[definition]{\hei 推论}
+\newtheorem{exercise}[definition]{}
+
+\theoremheaderfont{\CJKfamily{hei}\rmfamily}\theorembodyfont{\rmfamily}
+\theoremstyle{nonumberplain} \theoremseparator{:}
+\theoremsymbol{$\blacksquare$}
+\newtheorem{proof}{\hei 证明}
+
+\theoremsymbol{$\square$}
+\newtheorem{example}{\hei 例}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 脚注字体：宋体小五，单倍行距。悬挂缩进 1.5 字符。标号在正文中是上标，在脚注中为正体
+\renewcommand{\thefootnote}{}
+\renewcommand{\footnoterule}{\noindent \rule{5cm}{0.6pt} \vspace*{6pt} }
+\renewcommand{\footnotesize}{\typefootnote}
+\renewcommand{\footnotesep}{11pt}
+
+%使用pifont包里\ding{172}~\ding{181}产生的带圈数字1~10
+\newcommand\footnotecircle[1]{\footnote{\hangindent 1.5em \hspace*{-2.2em} \ding{\numexpr171+\value{footnote}}\hspace*{0.4em} #1}\textsuperscript{\typefootscript \ding{\numexpr171+\value{footnote}}}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 用于中文段落缩进 和正文版式
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%定义段落章节的标题和目录项的格式
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{2}
+
+% Modified By Lei Wang BaconChina
+% THU Version
+%\titleformat{\chapter}[hang]
+%    {\normalfont\xiaosan\filcenter\hei\sf}
+%    {\xiaosan{\chaptertitlename}}
+%    {20pt}{\xiaosan}
+%%\titlespacing{\chapter}{0pt}{-3ex  plus .1ex minus .2ex}{2.5ex plus .1ex minus .2ex}
+%\titlespacing{\chapter}{0pt}{-3ex  plus .1ex minus .2ex}{0.25em}
+%
+%\titleformat{\section}[hang]{\hei \sf \sihao}
+%    {\sihao \thesection}{0.5em}{}{}
+%%\titlespacing{\section}{0pt}{1.5ex plus .1ex minus .2ex}{\wordsep}
+%\titlespacing{\section}{0pt}{-0.2em}{0.8em}
+%
+%\titleformat{\subsection}[hang]{\hei \sf \banxiaosi}
+%    {\banxiaosi \thesubsection}{0.5em}{}{}
+%%    {\banxiaosi \thesubsection}{0pt}{}{}
+%%\titlespacing{\subsection}{0pt}{1.5ex plus .1ex minus .2ex}{\wordsep}
+%\titlespacing{\subsection}{0pt}{-0.25em}{1em}
+%
+%\titleformat{\subsubsection}[hang]{\hei \sf}
+%    {\thesubsubsection }{0.5em}{}{}
+%%\titlespacing{\subsubsection}{0pt}{1.2ex plus .1ex minus .2ex}{\wordsep}
+%\titlespacing{\subsubsection}{0pt}{0.25em}{0pt}
+
+%\titleformat{\chapter}[hang]
+%    {\normalfont\typechap\filcenter}
+%    {\typechap{\chaptertitlename}}
+%    {1em}{\typechap}
+%\titlespacing{\chapter}{0pt}{}{2.5ex plus .1ex minus .2ex}
+%\titlespacing{\chapter}{0pt}{15pt}{27pt}
+
+%\titleformat{\section}[hang]{\hei \sf \xiaoer}
+%    {\xiaoer \thesection}{0.5em}{}{}
+%%\titlespacing{\section}{0pt}{1.5ex plus .1ex minus .2ex}{\wordsep}
+%\titlespacing{\section}{0pt}{-0.2em}{0.8em}
+
+%\titleformat{\subsection}[hang]{\hei \sf \sanhao }
+%    {\sanhao \thesubsection}{0.5em}{}{}
+%%    {\banxiaosi \thesubsection}{0pt}{}{}
+%%\titlespacing{\subsection}{0pt}{1.5ex plus .1ex minus .2ex}{\wordsep}
+%\titlespacing{\subsection}{0pt}{-0.25em}{1em}
+
+%\titleformat{\subsubsection}[hang]{\hei \sf \sihao}
+%    {\sihao \thesubsubsection }{0.5em}{}{}
+%%\titlespacing{\subsubsection}{0pt}{1.2ex plus .1ex minus .2ex}{\wordsep}
+%\titlespacing{\subsubsection}{0pt}{0.25em}{0pt}
+
+
+%\titleformat{\subsubsubsection}[hang]{\hei \sf}
+%    {\thesubsubsection }{0.5em}{}{}
+%%\titlespacing{\subsubsection}{0pt}{1.2ex plus .1ex minus .2ex}{\wordsep}
+%\titlespacing{\subsubsubsection}{0pt}{0.5em}{0pt}
+
+%去掉中间对齐的sectionformat，这样就把节的标题左对齐了。
+%\renewcommand \sectionformat{}
+
+% 按清华标准, 缩小目录中各级标题之间的缩进
+\dottedcontents{chapter}[4em]{\hei\vspace{6pt}}{4em}{10pt}
+\dottedcontents{section}[4.2em]{}{2.2em}{5pt}
+\dottedcontents{subsection}[7em]{}{3em}{5pt}
+%\dottedcontents{subsubsection}[2.86cm]{}{3.4em}{5pt}
+%\dottedcontents{subsubsubsection}[3.66cm]{}{4.2em}{5pt}
+
+%\makeatletter
+%\@ifundefined{chapter}{}{
+%  \newcommand\CJKprechaptername{第}
+%  \newcommand\CJKchaptername{章}
+%  \newcommand\CJKthechapter{\zhnumber{\@arabic\c@chapter}}}
+
+%\renewcommand\appendixname{附录\@Alph\c@chapter}
+
+%\@ifundefined{mainmatter}
+%  {\renewcommand\abstractname{摘要}}{}
+
+%\renewcommand\chaptername{\CJKprechaptername\CJKthechapter\CJKchaptername}
+%\makeatother
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 定义页眉和页脚 使用fancyhdr 宏包
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\makeheadrule}{%
+   % \makebox[0pt][l]{\rule[.7\baselineskip]{\headwidth}{0.75pt}}}%\vskip-.8\baselineskip}
+   \hrule width\headwidth height0.75pt}
+
+
+
+\pagestyle{fancyplain}
+
+%去掉章节标题中的数字
+%\renewcommand{\chaptermark}[1]{\markboth{\chaptername\hspace{1em}#1}{}}
+
+\fancyhf{}
+
+
+%%% Clear Header %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Clear Header Style on the Last Empty Odd pages
+\makeatletter
+\def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else%
+    \hbox{}%
+    \thispagestyle{empty}%              % Empty header styles
+    \newpage%
+    \if@twocolumn\hbox{}\newpage\fi\fi\fi}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 设置行距和段落间垂直距离
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% 段落之间的竖直距离
+\setlength{\parskip}{0pt}
+
+% 定义行距
+\renewcommand{\baselinestretch}{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 调整列表环境的垂直间距
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\let\orig@Itemize =\itemize
+\let\orig@Enumerate =\enumerate
+\let\orig@Description =\description
+
+\def\Myspacing{\itemsep=2ex \topsep=-4ex \partopsep=-2ex \parskip=-1ex \parsep=2ex}
+
+\def\newitemsep{
+\renewenvironment{itemize}{\orig@Itemize\Myspacing}{\endlist}
+\renewenvironment{enumerate}{\orig@Enumerate\Myspacing}{\endlist}
+\renewenvironment{description}{\orig@Description\Myspacing}{\endlist}
+}
+
+\def\olditemsep{
+\renewenvironment{itemize}{\orig@Itemize}{\endlist}
+\renewenvironment{enumerate}{\orig@Enumerate}{\endlist}
+\renewenvironment{description}{\orig@Description}{\endlist}
+}
+
+\newitemsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 修改引用的格式，
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%第一行在引用处数字两边加方框
+%第二行去除参考文献里数字两边的方框
+%\makeatletter
+%\def\@cite#1{\mbox{$\m@th^{\hbox{\@ove@rcfont[#1]}}$}}
+%\renewcommand\@biblabel[1]{#1}
+%\makeatother
+
+\renewcommand{\@openbib@code}{\addtolength{\itemsep}{-7pt}}
+
+% 增加 \ucite 命令使显示的引用为上标形式
+\newcommand{\ucite}[1]{\textsuperscript{\mbox{\scriptsize \cite{#1}}}}%张宏剑修改20130327
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% 定制浮动图形和表格标题样式
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\renewcommand{\captionfont}{\CJKfamily{song}\rmfamily}
+%\renewcommand{\captionlabelfont}{\CJKfamily{song}\rmfamily}
+%三线表设置
+\setlength{\heavyrulewidth}{2.25pt}
+\setlength{\lightrulewidth}{0.75pt}
+\setlength{\abovetopsep}{0pt}
+\setlength{\belowbottomsep}{-6pt}
+
+% 按清华标准, 去掉图表号后面的:
+%\renewcommand{\captionlabeldelim}{\hspace{1em}}
+%\DeclareCaptionLabelSeparator{colon}{\hspace{1em}}
+%\renewcommand{\arraystretch}{1}
+
+
+% \subsubsection{浮动对象以及表格}
+% \label{sec:float}
+% 设置浮动对象和文字之间的距离
+% \changes{v2.6}{2006/06/09}{增加 \cs{floatsep}，\cs{@fptop}，\cs{@fpsep} 和 \cs{@fpbot}。}
+%    \begin{macrocode}
+%<*cls>
+%\makeatletter
+%\setlength{\floatsep}{12bp \@plus4pt \@minus1pt}
+%\setlength{\intextsep}{2pt \@plus2pt \@minus2pt}
+%\setlength{\textfloatsep}{12bp \@plus4pt \@minus2pt}
+%\setlength{\@fptop}{0bp \@plus1.0fil}
+%\setlength{\@fpsep}{12bp \@plus2.0fil}
+%\setlength{\@fpbot}{0bp \@plus1.0fil}
+%\makeatother
+%    \end{macrocode}
+
+% 定制浮动图形和表格标题样式（参考ThuThesis：清华大学学位论文模板）
+% \begin{itemize}
+%   \item 图表标题字体为 11pt， 这里写作大五号
+%   \item 去掉图表号后面的冒号。图序与图名文字之间空一个汉字符宽度。
+%   \item 图：caption 在下，段前空 6 磅，段后空 12 磅
+%   \item 表：caption 在上，段前空 12 磅，段后空 6 磅
+% \end{itemize}
+
+\captionsetup[table]{labelsep=quad,format=hang,justification=centerlast,font={small,stretch=1.16},position=top,belowskip={15pt-\intextsep},aboveskip=6pt}
+
+\captionsetup[figure]{labelsep=quad,format=hang,justification=centerlast,font={small,stretch=1.16},position=bottom,belowskip={10pt-\intextsep},aboveskip=6pt}
+
+\captionsetup[subfigure]{labelsep=quad,format=hang,justification=centerlast,font={small,stretch=1.16},position=bottom,belowskip=0pt,aboveskip=6pt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 定义题头格言的格式
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%
+% 用法 \begin{Aphorism}{author}
+%         aphorism
+%      \end{Aphorism}
+
+\newsavebox{\AphorismAuthor}
+\newenvironment{Aphorism}[1]
+{\vspace{0.5cm}\begin{sloppypar} \slshape
+\sbox{\AphorismAuthor}{#1}
+\begin{quote}\small\itshape }
+{\\ \hspace*{\fill}------\hspace{0.2cm} \usebox{\AphorismAuthor}
+\end{quote}
+\end{sloppypar}\vspace{0.5cm}}
+
+%自定义一个空命令，用于注释掉文本中不需要的部分。
+\newcommand{\comment}[1]{}
+
+% This is the flag for longer version
+\newcommand{\longer}[2]{#1}
+
+\newcommand{\ds}{\displaystyle}
+
+% define graph scale
+\def\gs{1.0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 自定义项目列表标签及格式 \begin{denselist} 列表项 \end{denselist}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcounter{newlist} %自定义新计数器
+\newenvironment{denselist}[1][temp]{%%%%% 定义新环境：可改变的列表题目
+\begin{list}{\textbf{#1} (\arabic{newlist})} %%标签格式
+    {
+    \usecounter{newlist}
+     \setlength{\labelwidth}{22pt} %标签盒子宽度
+     \setlength{\labelsep}{0cm} %标签与列表文本距离
+     \setlength{\leftmargin}{0cm} %左右边界
+     \setlength{\rightmargin}{0cm}
+     \setlength{\parsep}{0ex} %段落间距
+     \setlength{\itemsep}{0ex} %标签间距
+     \setlength{\itemindent}{44pt} %标签缩进量
+     \setlength{\listparindent}{44pt} %段落缩进量
+    }}
+{\end{list}}%%%%%
+
+%\def\defaultfont{\renewcommand{\baselinestretch}{1.5}
+%\fontsize{12pt}{13pt}\selectfont}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 封面、摘要、版权、致谢格式定义 --- by Feng Hua & Lei Wang
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\ctitlefirstline#1{\def\@ctitlefirstline{#1}}\def\@ctitlefirstline{}
+\def\ctitlesecondline#1{\def\@ctitlesecondline{#1}}\def\@ctitlesecondline{}
+\def\cdegree#1{\def\@cdegree{#1}}\def\@cdegree{}
+\def\caffil#1{\def\@caffil{#1}}\def\@caffil{}
+\def\csubject#1{\def\@csubject{#1}}\def\@csubject{}
+\def\cauthor#1{\def\@cauthor{#1}}\def\@cauthor{}
+\def\cnumber#1{\def\@cnumber{#1}}\def\@cnumber{}
+\def\csubsub#1{\def\@csubsub{#1}}\def\@csubsub{}
+\def\csupervisor#1{\def\@csupervisor{#1}}\def\@csupervisor{}
+\def\cassosupervisor#1{\def\@cassosupervisor{~ & 副指导教师 & ：& #1\\}}\def\@cassosupervisor{}
+\def\ccosupervisor#1{\def\@ccosupervisor{~ & 联\hfill合\hfill导\hfill 师 & ：& #1\\}}\def\@ccosupervisor{}
+\def\cdate#1{\def\@cdate{#1}}\def\@cdate{}
+\long\def\cabstract#1{\long\def\@cabstract{#1}}\long\def\@cabstract{}
+\def\ckeywords#1{\def\@ckeywords{#1}}\def\@ckeywords{}
+
+\def\etitle#1{\def\@etitle{#1}}\def\@etitle{}
+\def\edegree#1{\def\@edegree{#1}}\def\@edegree{}
+\def\eaffil#1{\def\@eaffil{#1}}\def\@eaffil{}
+\def\esubject#1{\def\@esubject{#1}}\def\@esubject{}
+\def\edepartment#1{\def\@edepartment{#1}}\def\@edepartment{}
+\def\eauthor#1{\def\@eauthor{#1}}\def\@eauthor{}
+\def\exuewei#1{\def\@exuewei{#1}}\def\@exuewei{}
+\def\esupervisor#1{\def\@esupervisor{#1}}\def\@esupervisor{}
+\def\eassosupervisor#1{\def\@eassosupervisor{Associate Supervisor: & #1\\}}\def\@eassosupervisor{}
+\def\ecosupervisor#1{\def\@ecosupervisor{~ & #1\\}}\def\@ecosupervisor{}
+\def\edate#1{\def\@edate{#1}}\def\@edate{}
+\long\def\eabstract#1{\long\def\@eabstract{#1}}\long\def\@eabstract{}
+\def\ekeywords#1{\def\@ekeywords{#1}}\def\@ekeywords{}
+
+\def\makecover{
+    \begin{titlepage}
+    %中文封面%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \newpage
+    \thispagestyle{empty}
+    \begin{center} {
+    \vspace*{3mm}
+%    \centerline{\epsfig{file=newlogo.eps,width=0.7\columnwidth,clip=}}%张宏剑
+%    \epsfig{file=logo.eps,width=0.53\columnwidth,clip=} \\
+    \includegraphics[width=8.5cm]{logo.eps} \\
+    \vspace*{4mm}
+    {\typethesis \@cdegree 研究生学位论文} \\
+    \vspace*{8mm}
+    {\typetimu \hspace*{-1cm}
+    \begin{tabular}{lc}
+    \raisebox{-2mm}{题目：} & {\typetitle \@ctitlefirstline} \\ \cline{2-2}
+          & {\typetitle \@ctitlesecondline} \\ \cline{2-2}
+    　 　 & {\hspace*{9cm}}　
+    \end{tabular} } \\
+    \vspace*{2.2cm}
+    {\typexingming \hspace*{-2cm}
+    \begin{tabular}{lc}
+    姓\hphantom{姓名}名： \hspace*{1mm}& {\typename \@cauthor}\\ \cline{2-2}
+    学\hphantom{姓名}号： & {\typename \@cnumber}\\ \cline{2-2}
+    院\hphantom{姓名}系： & {\typename \@caffil}\\ \cline{2-2}
+    专\hphantom{姓名}业： & {\typename \@csubject}\\ \cline{2-2}
+    研究方向： & {\typename \@csubsub}\\ \cline{2-2}
+    导师姓名： & {\typename \@csupervisor} \\ \cline{2-2}
+    　 　 & {\hspace*{6.5cm}}　
+    \end{tabular} } \\
+   \typedate √ 学术学位      \hspace{1.0cm}  □ 专业学位\\
+    \vspace*{1.2cm}
+    \typedate \@cdate
+    }
+    \end{center}
+
+    % 封二 空白页
+    \cleardoublepage
+     \newpage
+    \thispagestyle{empty}
+    \begin{center}
+    \vspace*{-1.2cm}
+    {\typetitleen
+    \begin{center} { \@etitle} \end{center}}
+    \vspace*{1.8cm}
+    {\typeenglish
+    Dissertation Submitted to \\
+    \textbf{Peking University} \\
+    \vspace*{0.6cm}
+    \textbf{In partial fulfillment of the requirements for the degree of} \\
+    \@edegree \\
+    \vspace*{2cm}
+    By \\
+    \textbf{\@eauthor}\textbf{\@exuewei}
+    \\
+    \textbf{(\@esubject)} \\}
+    \vspace*{0.8cm}
+    {\typeenglishlarge
+     Dissertation Supervisor: \textbf{\@esupervisor} \\ \quad \\
+    Department of \@edepartment \\
+    College of Engineering \\
+    Peking University \\
+    \@edate, Beijing \\}
+    \end{center}
+
+    \cleardoublepage
+     \newpage
+    \thispagestyle{empty}
+    \end{titlepage}
+}
+
+\def\makeabstract{
+   \begin{titlepage}%%%张宏剑
+   \newpage%张宏剑
+    \thispagestyle{plain}%张宏剑
+    %Abstract and keywords%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %\newpage%张宏剑施加试试不出现yemei
+    %\thispagestyle{empty}%张宏剑施加试试不出现yemei
+%    \defaultfont
+
+    \chapter*{摘要 \markboth{摘要}{摘要}}
+    %\addcontentsline{toc}{chapter}{\hei {摘~~~~要}}%陈立洋注释掉：2014年5月更改，目录从第一章开始，不包含摘要
+    %张宏剑去掉
+    \setcounter{page}{1}
+    {\typetext \@cabstract }
+
+    \cleardoublepage
+    \newpage
+
+    \thispagestyle{plain}%页眉上不出现文字
+%    \chapter*{ABSTRACT}
+    %\addcontentsline{toc}{chapter}{\hei Abstract} %陈立洋注释掉：2014年5月学院要求，目录从第一章开始，不包含摘要
+    \markboth{\typeyemeien ABSTRACT}{\typeyemeien ABSTRACT}%张宏剑去掉
+    %\vspace*{-5mm}
+   \begin{center}
+    {
+  %  \typetitleab
+    \begin{center} 
+    % {\@etitle}
+    \end{center}}
+   % \vspace*{8mm}
+    %{\typetext
+   % \@eauthor\ (\@esubject) \\
+    %Directed by \@esupervisor \\[3mm] }
+    {\typeab \textbf{ABSTRACT}}
+    \end{center}
+    \vspace*{-2mm}
+    \typetext
+    \@eabstract
+%    \noindent {\textbf{Key Words:}} \quad \@ekeywords
+    \cleardoublepage
+
+     \end{titlepage}%%张宏剑
+}
+\makeatother
+
+
+
+\raggedbottom
+
+%\oddsidemargin 0.9em
+
+\setlength{\multlinegap}{0mm}

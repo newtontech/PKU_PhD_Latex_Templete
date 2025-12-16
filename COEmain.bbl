@@ -1,0 +1,48 @@
+\begin{thebibliography}{6}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{#1}
+\expandafter\ifx\csname urlstyle\endcsname\relax\else
+  \urlstyle{same}\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \DeclareUrlCommand\doi{\urlstyle{rm}}
+  \def\eprint#1#2{#2}
+\else
+  \def\doi#1{\href{https://doi.org/#1}{\nolinkurl{#1}}}
+  \let\eprint\href
+\fi
+
+\bibitem[{张恭庆, 郭懋正}(1990)]{Reference_authors_Chinese}
+{张恭庆, 郭懋正}.
+\newblock 泛函分析讲义（下册）\allowbreak[M].
+\newblock 北京: 北京大学出版社\, 1990.
+
+\bibitem[{L. Schwartz, 姚家燕译}(2010)]{Reference_translated_Chinese}
+{L. Schwartz, 姚家燕译}.
+\newblock 广义函数论\allowbreak[M].
+\newblock 北京: 高等教育出版社\, 2010.
+
+\bibitem[Drazin et~al.(2004)Drazin and Reid]{Reference_book}
+Drazin P~G, Reid W~H.
+\newblock Hydrodynamic stability (2nd ed.)\allowbreak[M].
+\newblock Cambridge: Cambridge University Press, 2004.
+
+\bibitem[Avila et~al.(2011)Avila, Moxey, de~{Lozar}, Avila, Barkley, and
+  Hof]{Reference_article}
+Avila K, Moxey D, de~{Lozar} A, et~al.
+\newblock The onset of turbulence in pipe {FLOW}\allowbreak[J].
+\newblock Science, 2011, 333\allowbreak (6039): 192-196.
+
+\bibitem[Chevalier et~al.(2007)Chevalier, Schlatter, Lundbladh, and
+  Henningson]{Reference_techreport}
+Chevalier M, Schlatter P, Lundbladh A, et~al.
+\newblock Simson: A pseudo-spectral solver for incompressible boundary layer
+  flows: TRITA-MEK 2007:07\allowbreak[R].
+\newblock KTH Mechanics, 2007.
+
+\bibitem[Denzler(1999)]{Reference_thesis}
+Denzler J.
+\newblock A study of the spectral theory of the orr--sommerfeld equation for
+  plane couette flow\allowbreak[D].
+\newblock Technischen Universit{\"a}t M{\"u}nchen, 1999.
+
+\end{thebibliography}

@@ -1,0 +1,203 @@
+
+
+
+
+% !Mode:: "TeX:UTF-8"
+% 文字编码：UTF-8
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   LaTeX File for Doctor (Master) Thesis of Peking University
+%   LaTeX + CJK     北京大学博士（硕士）论文模板
+%   Based on Wang Lei's Template for THU
+%   Version: 1.00
+%   Last Update: 2005-05-25
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   Copyright 2004-2005  by  Ying Pan       (yeying_pan@yahoo.com.cn)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   LaTeX File for Doctor (Master) Thesis of Tsinghua University
+%   LaTeX + CJK     清华大学博士（硕士）论文模板
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   Copyright 2002-2004  by  Lei Wang (BaconChina)       (bcpub@sina.com)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   LaTeX File for phd thesis of xi'an Jiao Tong University
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   Copyright 2002  by  Wang Tianshu    (tswang@asia.com)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%draft 选项可以使插入的图形只显示外框，以加快预览速度。
+%fleqn 让公式左对齐。
+\documentclass[12pt,a4paper,openany,twoside]{ctexbook}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   引用的宏包
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{setup/package.tex}
+\usepackage{cjkhl}
+\usepackage{booktabs}
+\usepackage{color}
+\usepackage{multirow}
+\usepackage[sort]{gbt7714}
+\usepackage{setspace}  %更新参考文献间隔
+
+\begin{document}
+
+%定义所有的eps文件在 figures 子目录下
+\graphicspath{{figures/}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   文本格式定义
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{setup/COEformat.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   正文部分
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%--- Preface ------------------------
+\frontmatter
+ \fancyfoot[CO,CE]{\typeyejiao\thepage}
+%解决中英文混排的断行问题，会加入间距，但不会影响断行
+\sloppy
+
+\pagenumbering{Roman}
+\renewcommand{\headrulewidth}{0pt}%改为0pt即可去掉页眉下面的横线
+\renewcommand{\footrulewidth}{0pt}%改为0pt即可去掉页脚上面的横线
+
+%封面 (中英文封面)
+\input{preface/COEcover}
+
+%匿名评审封面
+%\input{preface/covera}
+
+%版权声明
+\includepdf{copyright2.pdf}
+\cleardoublepage
+%中文摘要
+ \renewcommand{\headrulewidth}{0.75pt}
+ \fancyhead[CE]{\typeyemei 北京大学博士学位论文}
+ \renewcommand{\chaptermark}[1]{\markboth{第\CJKnumber{\arabic{chapter}}章\enspace #1}{}}
+ \fancyhead[CO]{\typeyemei\leftmark}
+\renewcommand{\headrule}{
+    {%\if@fancyplain\let\headrulewidth\plainheadrulewidth\fi
+     \makeheadrule}}
+\include{preface/c_COEabstract}
+%英文摘要
+\include{preface/e_COEabstract}
+\makeabstract
+
+% 对应于小四的标准字号是 12pt
+% 可以在正文中用此命令修改所需要字体的的大小
+% 下面这个设置是正文各章使用的标准字体与行距
+\renewcommand{\baselinestretch}{1}
+\fontsize{12pt}{20pt}\selectfont
+
+%目录
+\tableofcontents
+%\thispagestyle{empty}
+
+\cleardoublepage
+%表格目录
+%\listoftables
+%\thispagestyle{empty}
+
+%插图目录
+%\listoffigures
+%\thispagestyle{empty}
+
+%符号对照表
+%\include{preface/denotation}
+
+\cleardoublepage
+
+%设置列表的行距
+
+\renewcommand{\labelenumi}{(\arabic{enumi})}
+\newitemsep
+
+%--- body --------------------------
+\mainmatter
+
+
+%正文章节
+
+%\pagenumbering{arabic}
+%\renewcommand{\thefootnote}{\arabic{footnote}}
+
+%绪论
+
+\include{body/COEintroduction}
+\cleardoublepage
+\include{body/COEchap2}
+\cleardoublepage
+\include{body/COEchap3}
+\cleardoublepage
+\include{body/COEchap4}
+%结论
+
+%\include{body/COEconclusion}
+\cleardoublepage
+
+%\backmatter
+
+%参考文献
+\bibliographystyle{gbt7714-numerical}
+%\bibliographystyle{acm}  %张宏剑
+%agsm是一种harvard的文献格式，%如果需要使用这种
+%格式，要在setup/packages.tex中去掉\usepackage{harvard} 的注释
+%\bibliographystyle{agsm}
+\setlength{\bibsep}{3pt} %更新参考文献间隔
+\phantomsection
+\addcontentsline{toc}{chapter}{参考文献}
+
+%\addtolength{\itemsep}{-0.8 em} % 缩小参考文献间的垂直间距, 在bibtex 下无效
+%\bibliographystyle{plain}
+%\nocite{*}
+{\typebib
+%\setlength{\bibspacing}{\baselineskip}
+\bibliography{body/COEreference}
+}
+
+%打印索引
+%\generateindex
+\cleardoublepage
+%附录
+\begin{appendix}
+%   \renewcommand{\chaptername}{附录\Alph{chapter}}
+\renewcommand{\chaptermark}[1]{\markboth{附录\Alph{chapter}\enspace #1}{}}
+\input{appendix/COEappendix_A}
+\end{appendix}
+\cleardoublepage
+
+%发表的文章列表
+\include{appendix/COEpublications}
+\cleardoublepage
+%致谢
+\include{appendix/COEacknowledgements}
+\cleardoublepage
+
+%原创性声明和使用授权说明
+\phantomsection
+\addcontentsline{toc}{chapter}{\hei 北京大学学位论文原创性声明和使用授权说明}
+\includepdf{Authority2.pdf}
+\include{appendix/makeup}
+%\cleardoublepage
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%% End of the file  %%%%%%%%%%%%%%%%%%%%%%%%
