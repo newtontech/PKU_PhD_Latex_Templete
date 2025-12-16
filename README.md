@@ -1,6 +1,8 @@
+
 # 北京大学工学院博士学位论文LaTeX模板
 
-这是一个用于撰写北京大学工学院博士学位论文的 LaTeX 模板项目。本项目旨在提供一个便捷的 LaTeX 环境，帮助学生专注于论文内容的创作。
+这是一个用于撰写北京大学博士学位论文的 LaTeX 模板项目。此模板基于北京大学工程学院的博士毕业论文模板：https://www.coe.pku.edu.cn/service/biyedb/11187.html 。
+
 
 ## 项目结构
 
@@ -31,19 +33,6 @@
         ```bash
         git checkout double-blind
         ```
-
-3.  **编译论文**:
-    使用 `pdflatex` 或您的首选 LaTeX 编译器编译 `COEmain.tex` 文件。通常需要编译多次以正确生成目录、参考文献等。
-    ```bash
-    pdflatex COEmain.tex
-    bibtex COEmain # 如果您使用了参考文献
-    pdflatex COEmain.tex
-    pdflatex COEmain.tex
-    ```
-    您也可以使用像 `latexmk` 这样的工具来自动化编译过程：
-    ```bash
-    latexmk -pdf COEmain.tex
-    ```
 
 ## Git 忽略文件 (`.gitignore`)
 
