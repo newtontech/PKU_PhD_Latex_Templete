@@ -14,3 +14,8 @@
 *.thm
 *.xdv
 *.bak
+*.idx
+*.ind
+*.ilg
+*.lot
+*.lof
