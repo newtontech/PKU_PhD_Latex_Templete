@@ -1,0 +1,16 @@
+# macOS specific files
+.DS_Store
+
+# LaTeX intermediate files
+*.aux
+*.log
+*.out
+*.toc
+*.blg
+*.bbl
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.thm
+*.xdv
+*.bak
