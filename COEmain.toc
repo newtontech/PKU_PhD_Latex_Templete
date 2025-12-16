@@ -28,7 +28,5 @@
 \contentsline {chapter}{\numberline {第四章\hspace {.3em}}模板更新记录}{13}{chapter.4}%
 \contentsline {chapter}{参考文献}{15}{section*.6}%
 \contentsline {chapter}{\numberline {附录 A\hspace {.3em}}附录示例}{17}{appendix.A}%
-\contentsline {chapter}{\CJKfamily {hei}个人简历、在学期间发表的学术论文与研究成果}{19}{section*.10}%
-\contentsline {chapter}{\CJKfamily {hei}致谢}{21}{section*.15}%
-\contentsline {chapter}{\CJKfamily {hei}北京大学学位论文原创性声明和使用授权说明}{23}{section*.16}%
+\contentsline {chapter}{\CJKfamily {hei}科研成果}{19}{section*.10}%
 \contentsfinish 

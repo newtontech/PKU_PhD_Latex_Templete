@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.3.8)  28 NOV 2024 12:03
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.3.8)  28 NOV 2024 12:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -867,8 +867,6 @@ Package fontspec Info: Font family 'SimSun(1)' created for font 'SimSun' with
 (fontspec)             <->"SimSun/OT:script=hani;language=dflt;embolden=2;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
-) (./cjkhl.sty
-Package: cjkhl 2012/08/04 v0.01 Highlighting in CJK documents (DPC)
 ) (c:/texlive/2023/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \heavyrulewidth=\dimen280
@@ -888,10 +886,10 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@thisruleclass=\count337
 \@lastruleclass=\count338
 \@thisrulewidth=\dimen292
-)
-(./gbt7714.sty
+) (./gbt7714.sty
 Package: gbt7714 2021/06/20 v2.1.2 GB/T 7714—2015 BibTeX Style
- (c:/texlive/2023/texmf-dist/tex/latex/natbib/natbib.sty
+
+(c:/texlive/2023/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 
 
@@ -905,33 +903,35 @@ LaTeX Info: Redefining \citenum on input line 708.
 \c@NAT@ctr=\count339
 )) (./COEmain.aux (./preface/c_COEabstract.aux) (./preface/e_COEabstract.aux)
 (./body/COEintroduction.aux) (./body/COEchap2.aux) (./body/COEchap3.aux)
-(./body/COEchap4.aux) (./appendix/COEpublications.aux)
-(./appendix/COEacknowledgements.aux) (./appendix/makeup.aux))
+(./body/COEchap4.aux)
+
+LaTeX Warning: Label `tab:list' multiply defined.
+
+(./appendix/COEpublications.aux))
 \openout1 = `COEmain.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-Package hyperref Info: Link coloring OFF on input line 53.
- (./COEmain.out)
-(./COEmain.out)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+Package hyperref Info: Link coloring OFF on input line 51.
+ (./COEmain.out) (./COEmain.out)
 \@outlinefile=\write4
 \openout4 = `COEmain.out'.
 
@@ -1046,9 +1046,7 @@ Class ctexbook Warning: Command `\CTEXsetup' is deprecated.
 \c@example=\count365
 \AphorismAuthor=\box62
 \c@newlist=\count366
-) (./preface/COEcover.tex
-File: figures//logo.eps Graphic file (type eps)
-<figures//logo.eps>
+) (./preface/COEcovern.tex
 
 Package fontspec Info: Could not resolve font "SimHei/I" (it probably doesn't
 (fontspec)             exist).
@@ -1074,67 +1072,6 @@ Package fontspec Info: Font family 'SimHei(0)' created for font 'SimHei' with
 (fontspec)             - 'bold' (b/n) with NFSS spec.:
 (fontspec)             <->"SimHei/OT:script=hani;language=dflt;embolden=2;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
-
-LaTeX Font Info:    Calculating math sizes for size <22> on input line 55.
-LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line
- 55.
-
-(c:/texlive/2023/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
-File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
-)
-LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line
- 55.
-
-(c:/texlive/2023/texmf-dist/tex/latex/psnfss/omlztmcm.fd
-File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
-)
-LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line
- 55.
-
-(c:/texlive/2023/texmf-dist/tex/latex/psnfss/omsztmcm.fd
-File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
-)
-LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line
- 55.
-
-(c:/texlive/2023/texmf-dist/tex/latex/psnfss/omxztmcm.fd
-File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
-)
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 5
-5.
-
-(c:/texlive/2023/texmf-dist/tex/latex/psnfss/ot1ptm.fd
-File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
-)
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <22> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 55.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <16.28012> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 55.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <13.20013> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 55.
-
-
-LaTeX Font Warning: Font shape `OML/eur/m/n' in size <22> not available
-(Font)              size <20.74> substituted on input line 55.
-
-
-LaTeX Font Warning: Font shape `OML/eur/m/n' in size <16.28012> not available
-(Font)              size <17.28> substituted on input line 55.
-
-
-LaTeX Font Warning: Font shape `OML/eur/m/n' in size <13.20013> not available
-(Font)              size <14.4> substituted on input line 55.
-
-LaTeX Font Info:    Calculating math sizes for size <15> on input line 55.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <15> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 55.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <11.10008> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 55.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9.00009> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 55.
-
-LaTeX Font Warning: Font shape `OML/eur/m/n' in size <15> not available
-(Font)              size <14.4> substituted on input line 55.
 
 
 Package fontspec Info: Could not resolve font "FangSong/I" (it probably
@@ -1162,7 +1099,105 @@ Package fontspec Info: Font family 'FangSong(0)' created for font 'FangSong'
 (fontspec)             <->"FangSong/OT:script=hani;language=dflt;embolden=2;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
+LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line
+ 45.
+
+(c:/texlive/2023/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
+File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
+)
+LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line
+ 45.
+
+(c:/texlive/2023/texmf-dist/tex/latex/psnfss/omlztmcm.fd
+File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
+)
+LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line
+ 45.
+
+(c:/texlive/2023/texmf-dist/tex/latex/psnfss/omsztmcm.fd
+File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
+)
+LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line
+ 45.
+
+(c:/texlive/2023/texmf-dist/tex/latex/psnfss/omxztmcm.fd
+File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
+)
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 4
+5.
+
+(c:/texlive/2023/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <16.06> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 45.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.05249> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 45.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.53937> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 45.
+
+
+LaTeX Font Warning: Font shape `OML/eur/m/n' in size <16.06> not available
+(Font)              size <17.28> substituted on input line 45.
+
+
+LaTeX Font Warning: Font shape `OML/eur/m/n' in size <10.53937> not available
+(Font)              size <10.95> substituted on input line 45.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 45.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 45.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 45.
+LaTeX Font Info:    Trying to load font information for OMS+TimesNewRoman(0) on
+ input line 45.
+LaTeX Font Info:    No file OMSTimesNewRoman(0).fd. on input line 45.
+
+LaTeX Font Warning: Font shape `OMS/TimesNewRoman(0)/m/n' undefined
+(Font)              using `OMS/cmsy/m/n' instead on input line 45.
+
 [1
+
+
+
+] [2
+
+])
+File: figures/copyright2.pdf Graphic file (type pdf)
+<use figures/copyright2.pdf>
+File: figures/copyright2.pdf Graphic file (type pdf)
+<use figures/copyright2.pdf>
+File: figures/copyright2.pdf Graphic file (type pdf)
+<use figures/copyright2.pdf, page 1>
+File: figures/copyright2.pdf Graphic file (type pdf)
+<use figures/copyright2.pdf, page 1>
+File: figures/copyright2.pdf Graphic file (type pdf)
+<use figures/copyright2.pdf, page 1>
+File: figures/copyright2.pdf Graphic file (type pdf)
+<use figures/copyright2.pdf, page 1>
+File: figures/copyright2.pdf Graphic file (type pdf)
+<use figures/copyright2.pdf, page 1>
+ [3
+
+] [4
+
+]
+\openout2 = `preface/c_COEabstract.aux'.
+
+ (./preface/c_COEabstract.tex)
+\openout2 = `preface/e_COEabstract.aux'.
+
+ (./preface/e_COEabstract.tex)
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 97.
+
+[1
+
+
+
+
+
 
 
 
@@ -1197,56 +1232,6 @@ Package fontspec Info: Font family 'MicrosoftYaHei(0)' created for font
 
  [3] [4
 
-])
-File: figures/copyright2.pdf Graphic file (type pdf)
-<use figures/copyright2.pdf>
-File: figures/copyright2.pdf Graphic file (type pdf)
-<use figures/copyright2.pdf>
-File: figures/copyright2.pdf Graphic file (type pdf)
-<use figures/copyright2.pdf, page 1>
-File: figures/copyright2.pdf Graphic file (type pdf)
-<use figures/copyright2.pdf, page 1>
-File: figures/copyright2.pdf Graphic file (type pdf)
-<use figures/copyright2.pdf, page 1>
-File: figures/copyright2.pdf Graphic file (type pdf)
-<use figures/copyright2.pdf, page 1>
-File: figures/copyright2.pdf Graphic file (type pdf)
-<use figures/copyright2.pdf, page 1>
- [5] [6
-
-]
-\openout2 = `preface/c_COEabstract.aux'.
-
- (./preface/c_COEabstract.tex)
-\openout2 = `preface/e_COEabstract.aux'.
-
-
-(./preface/e_COEabstract.tex)
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 102.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 102.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 102.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 102.
-
-Overfull \vbox (0.85371pt too high) has occurred while \output is active []
-
-
-[1
-
-
-
-
-
-
-
-
-] [2
-
-] [3] [4
-
 ] (./COEmain.toc)
 \tf@toc=\write5
 \openout5 = `COEmain.toc'.
@@ -1260,20 +1245,6 @@ Overfull \vbox (0.85371pt too high) has occurred while \output is active []
 
  (./body/COEintroduction.tex
 第一章
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <16.06> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 3.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.05249> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 3.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.53937> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 3.
-
-LaTeX Font Warning: Font shape `OML/eur/m/n' in size <16.06> not available
-(Font)              size <17.28> substituted on input line 3.
-
-
-LaTeX Font Warning: Font shape `OML/eur/m/n' in size <10.53937> not available
-(Font)              size <10.95> substituted on input line 3.
-
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 4.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
@@ -1363,79 +1334,52 @@ LaTeX Font Warning: Font shape `OML/eur/m/n' in size <7.52812> not available
 [17
 
 ]
-File: figures//app.png Graphic file (type bmp)
-<figures//app.png>
+Overfull \hbox (12.97171pt too wide) in alignment at lines 35--62
+[] [] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 65--66
+
+ []
+
 ) [18
 
 ]
 \openout2 = `appendix/COEpublications.aux'.
 
- (./appendix/COEpublications.tex
-Underfull \hbox (badness 10000) in paragraph at lines 46--48
-
- []
-
-) [19
+ (./appendix/COEpublications.tex) [19
 
 
-
-] [20
-
-
-
-]
-\openout2 = `appendix/COEacknowledgements.aux'.
-
- (./appendix/COEacknowledgements.tex) [21
-
-
-] [22
-
-
-
-]
-File: figures/Authority2.pdf Graphic file (type pdf)
-<use figures/Authority2.pdf>
-File: figures/Authority2.pdf Graphic file (type pdf)
-<use figures/Authority2.pdf>
-File: figures/Authority2.pdf Graphic file (type pdf)
-<use figures/Authority2.pdf, page 1>
-File: figures/Authority2.pdf Graphic file (type pdf)
-<use figures/Authority2.pdf, page 1>
-File: figures/Authority2.pdf Graphic file (type pdf)
-<use figures/Authority2.pdf, page 1>
-File: figures/Authority2.pdf Graphic file (type pdf)
-<use figures/Authority2.pdf, page 1>
-File: figures/Authority2.pdf Graphic file (type pdf)
-<use figures/Authority2.pdf, page 1>
- [23]
-\openout2 = `appendix/makeup.aux'.
-
-
-(./appendix/makeup.tex) [24
 
 ]
 \tf@thm=\write6
 \openout6 = `COEmain.thm'.
 
- (./COEmain.aux (./preface/c_COEabstract.aux)
-(./preface/e_COEabstract.aux) (./body/COEintroduction.aux) (./body/COEchap2.aux
-) (./body/COEchap3.aux) (./body/COEchap4.aux) (./appendix/COEpublications.aux)
-(./appendix/COEacknowledgements.aux) (./appendix/makeup.aux))
+ (./COEmain.aux
+(./preface/c_COEabstract.aux) (./preface/e_COEabstract.aux)
+(./body/COEintroduction.aux) (./body/COEchap2.aux) (./body/COEchap3.aux)
+(./body/COEchap4.aux) (./appendix/COEpublications.aux))
 
 LaTeX Font Warning: Size substitutions with differences
-(Font)              up to 1.26pt have occurred.
+(Font)              up to 1.22pt have occurred.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `COEmain.out' has not changed.
-(rerunfilecheck)             Checksum: 45B5F728C6F12A69519D4E3BB7351F53;3525.
+(rerunfilecheck)             Checksum: 36422023166FD71BAB9F68DEED4425DE;3123.
  ) 
 Here is how much of TeX's memory you used:
- 23207 strings out of 476683
- 511752 string characters out of 5807576
- 1870012 words of memory out of 5000000
- 42897 multiletter control sequences out of 15000+600000
- 587856 words of font info for 322 fonts, out of 8000000 for 9000
+ 23001 strings out of 476683
+ 506477 string characters out of 5807576
+ 1868012 words of memory out of 5000000
+ 42721 multiletter control sequences out of 15000+600000
+ 563529 words of font info for 247 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  89i,17n,97p,1223b,673s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on COEmain.pdf (36 pages).
+Output written on COEmain.pdf (29 pages).

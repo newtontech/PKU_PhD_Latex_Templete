@@ -36,21 +36,21 @@
 % 一些字体是office2000 带的
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\setCJKfamilyfont{song}{SimSun}                             %宋体 song
-\newcommand{\song}{\CJKfamily{song}}                        % 宋体   (Windows自带simsun.ttf)
+\setCJKfamilyfont{song}{SimSun}                             %宋体 song  
+\newcommand{\song}{\CJKfamily{song}}                        % 宋体   (Windows自带simsun.ttf)  
 
-\setCJKfamilyfont{fs}{FangSong}                      %仿宋 fs
-\newcommand{\fs}{\CJKfamily{fs}}                            %仿宋体 (Windows自带simfang.ttf)
+\setCJKfamilyfont{fs}{FangSong}                      %仿宋 fs  
+\newcommand{\fs}{\CJKfamily{fs}}                            %仿宋体 (Windows自带simfang.ttf)  
 
 \setCJKfamilyfont{kai}{KaiTi}                        %楷体 kai
-\newcommand{\kai}{\CJKfamily{kai}}                        %楷体 (Windows自带simkai.ttf)
+\newcommand{\kai}{\CJKfamily{kai}}                        %楷体 (Windows自带simkai.ttf)  
+                         
+\setCJKfamilyfont{yh}{Microsoft YaHei}                    %微软雅黑 yh  
+\newcommand{\yh}{\CJKfamily{yh}}  
 
-\setCJKfamilyfont{yh}{Microsoft YaHei}                    %微软雅黑 yh
-\newcommand{\yh}{\CJKfamily{yh}}
-
-\setCJKfamilyfont{hei}{SimHei}                                    %黑体  hei
-\newcommand{\hei}{\CJKfamily{hei}}                          % 黑体   (Windows自带simhei.ttf)
-
+\setCJKfamilyfont{hei}{SimHei}                                    %黑体  hei  
+\newcommand{\hei}{\CJKfamily{hei}}                          % 黑体   (Windows自带simhei.ttf)  
+  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 重定义字号命令
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -63,14 +63,14 @@
 \newcommand{\typexingming}{\fontsize{15pt}{32pt}\hei\selectfont}    % 封面中的“姓名” 黑体 小三, 同三号字体1.25倍行距
 \newcommand{\typedate}{\zihao{3}}         % 封面中的年月 宋体 三号, 1.25倍行距
 
-\newcommand{\typetitleen}{\fontsize{26pt}{48pt}\sffamily\bfseries\selectfont}     % 英文标题内容 Arial 加粗倾斜 一号, 单倍行距
+\newcommand{\typetitleen}{\fontsize{26pt}{48pt}\sffamily\bfseries\itshape\selectfont}     % 英文标题内容 Arial 加粗倾斜 一号, 单倍行距
 
 \newcommand{\typeenglish}{\fontsize{16pt}{22pt}\selectfont}         % 英文封面 三号, 20磅行距
 \newcommand{\typeenglishlarge}{\fontsize{16pt}{34pt}\selectfont}         % 英文封面 三号, 20磅行距 加段落间距
 \newcommand{\typetitleab}{\fontsize{16pt}{32pt}\sffamily\selectfont}     % 英文摘要页标题内容 Arial 三号, 单倍行距
 \newcommand{\typeab}{\fontsize{12pt}{12pt}\sffamily\selectfont}     % 英文摘要页ABSTRACT Arial 小四号, 单倍行距
 
-\newcommand{\typetext}{\fontsize{12pt}{20pt}\selectfont}       % 正文  小四, 20 磅
+\newcommand{\typetext}{\fontsize{12pt}{20pt}\selectfont}       % 正文  小四, 20磅
 \newcommand{\typechap}{\zihao{3}\linespread{1.64}\hei}         % “摘要”两字 各章标题 黑体 三号, 单倍行距
 \newcommand{\typesec}{\zihao{4}\linespread{1.2}\hei}          % 各节标题 黑体 四号, 20磅行距
 \newcommand{\typesubsecctex}{\fontsize{13pt}{13pt}\linespread{1.2}\hei} % 二级节标题 黑体 13磅字, 20磅行距
@@ -122,8 +122,8 @@
 % 脚注字体：宋体小五，单倍行距。悬挂缩进 1.5 字符。标号在正文中是上标，在脚注中为正体
 \renewcommand{\thefootnote}{}
 \renewcommand{\footnoterule}{\noindent \rule{5cm}{0.6pt} \vspace*{6pt} }
-\renewcommand{\footnotesize}{\typefootnote}
-\renewcommand{\footnotesep}{11pt}
+\renewcommand{\footnotesize}{\typefootnote} 
+\renewcommand{\footnotesep}{11pt} 
 
 %使用pifont包里\ding{172}~\ding{181}产生的带圈数字1~10
 \newcommand\footnotecircle[1]{\footnote{\hangindent 1.5em \hspace*{-2.2em} \ding{\numexpr171+\value{footnote}}\hspace*{0.4em} #1}\textsuperscript{\typefootscript \ding{\numexpr171+\value{footnote}}}}
@@ -316,29 +316,29 @@
 %\renewcommand{\arraystretch}{1}
 
 
-% \subsubsection{浮动对象以及表格}
-% \label{sec:float}
-% 设置浮动对象和文字之间的距离
-% \changes{v2.6}{2006/06/09}{增加 \cs{floatsep}，\cs{@fptop}，\cs{@fpsep} 和 \cs{@fpbot}。}
-%    \begin{macrocode}
-%<*cls>
+% \subsubsection{浮动对象以及表格} 
+% \label{sec:float} 
+% 设置浮动对象和文字之间的距离 
+% \changes{v2.6}{2006/06/09}{增加 \cs{floatsep}，\cs{@fptop}，\cs{@fpsep} 和 \cs{@fpbot}。} 
+%    \begin{macrocode} 
+%<*cls> 
 %\makeatletter
-%\setlength{\floatsep}{12bp \@plus4pt \@minus1pt}
-%\setlength{\intextsep}{2pt \@plus2pt \@minus2pt}
-%\setlength{\textfloatsep}{12bp \@plus4pt \@minus2pt}
-%\setlength{\@fptop}{0bp \@plus1.0fil}
-%\setlength{\@fpsep}{12bp \@plus2.0fil}
-%\setlength{\@fpbot}{0bp \@plus1.0fil}
+%\setlength{\floatsep}{12bp \@plus4pt \@minus1pt} 
+%\setlength{\intextsep}{2pt \@plus2pt \@minus2pt} 
+%\setlength{\textfloatsep}{12bp \@plus4pt \@minus2pt} 
+%\setlength{\@fptop}{0bp \@plus1.0fil} 
+%\setlength{\@fpsep}{12bp \@plus2.0fil} 
+%\setlength{\@fpbot}{0bp \@plus1.0fil} 
 %\makeatother
-%    \end{macrocode}
+%    \end{macrocode} 
 
 % 定制浮动图形和表格标题样式（参考ThuThesis：清华大学学位论文模板）
-% \begin{itemize}
-%   \item 图表标题字体为 11pt， 这里写作大五号
-%   \item 去掉图表号后面的冒号。图序与图名文字之间空一个汉字符宽度。
-%   \item 图：caption 在下，段前空 6 磅，段后空 12 磅
-%   \item 表：caption 在上，段前空 12 磅，段后空 6 磅
-% \end{itemize}
+% \begin{itemize} 
+%   \item 图表标题字体为 11pt， 这里写作大五号 
+%   \item 去掉图表号后面的冒号。图序与图名文字之间空一个汉字符宽度。 
+%   \item 图：caption 在下，段前空 6 磅，段后空 12 磅 
+%   \item 表：caption 在上，段前空 12 磅，段后空 6 磅 
+% \end{itemize} 
 
 \captionsetup[table]{labelsep=quad,format=hang,justification=centerlast,font={small,stretch=1.16},position=top,belowskip={15pt-\intextsep},aboveskip=6pt}
 
@@ -423,7 +423,6 @@
 \def\esubject#1{\def\@esubject{#1}}\def\@esubject{}
 \def\edepartment#1{\def\@edepartment{#1}}\def\@edepartment{}
 \def\eauthor#1{\def\@eauthor{#1}}\def\@eauthor{}
-\def\exuewei#1{\def\@exuewei{#1}}\def\@exuewei{}
 \def\esupervisor#1{\def\@esupervisor{#1}}\def\@esupervisor{}
 \def\eassosupervisor#1{\def\@eassosupervisor{Associate Supervisor: & #1\\}}\def\@eassosupervisor{}
 \def\ecosupervisor#1{\def\@ecosupervisor{~ & #1\\}}\def\@ecosupervisor{}
@@ -431,6 +430,11 @@
 \long\def\eabstract#1{\long\def\@eabstract{#1}}\long\def\@eabstract{}
 \def\ekeywords#1{\def\@ekeywords{#1}}\def\@ekeywords{}
 
+\def\ctitle#1{\def\@ctitle{#1}}\def\@ctitle{}
+\def\etitle#1{\def\@etitle{#1}}\def\@etitle{}
+\def\firstclassmajor#1{\def\@firstclassmajor{#1}}\def\@firstclassmajor{}
+\def\secondclassmajor#1{\def\@secondclassmajor{#1}}\def\@secondclassmajor{}
+\def\thesisindex#1{\def\@thesisindex{#1}}\def\@thesisindex{}
 \def\makecover{
     \begin{titlepage}
     %中文封面%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -440,61 +444,78 @@
     \vspace*{3mm}
 %    \centerline{\epsfig{file=newlogo.eps,width=0.7\columnwidth,clip=}}%张宏剑
 %    \epsfig{file=logo.eps,width=0.53\columnwidth,clip=} \\
-    \includegraphics[width=8.5cm]{logo.eps} \\
-    \vspace*{4mm}
-    {\typethesis \@cdegree 研究生学位论文} \\
+%    \includegraphics[width=8.5cm]{logo.png} \\
+%    \vspace*{4mm}
+%    {\typethesis \@cdegree 研究生学位论文} \\
+	{\typethesis 北京大学博士学位论文}\\
+    \Large{(匿名评阅论文封面*)}\\
     \vspace*{8mm}
-    {\typetimu \hspace*{-1cm}
-    \begin{tabular}{lc}
-    \raisebox{-2mm}{题目：} & {\typetitle \@ctitlefirstline} \\ \cline{2-2}
-          & {\typetitle \@ctitlesecondline} \\ \cline{2-2}
-    　 　 & {\hspace*{9cm}}　
-    \end{tabular} } \\
+%    {\typetimu \hspace*{-1cm}
+%    \begin{tabular}{lc}
+%    \raisebox{-2mm}{题目：} & {\typetitle \@ctitlefirstline} \\ \cline{2-2}
+%          & {\typetitle \@ctitlesecondline} \\ \cline{2-2}    
+%    　 　 & {\hspace*{9cm}}　
+%    \end{tabular} } \\
     \vspace*{2.2cm}
-    {\typexingming \hspace*{-2cm}
-    \begin{tabular}{lc}
-    姓\hphantom{姓名}名： \hspace*{1mm}& {\typename \@cauthor}\\ \cline{2-2}
-    学\hphantom{姓名}号： & {\typename \@cnumber}\\ \cline{2-2}
-    院\hphantom{姓名}系： & {\typename \@caffil}\\ \cline{2-2}
-    专\hphantom{姓名}业： & {\typename \@csubject}\\ \cline{2-2}
-    研究方向： & {\typename \@csubsub}\\ \cline{2-2}
-    导师姓名： & {\typename \@csupervisor} \\ \cline{2-2}
-    　 　 & {\hspace*{6.5cm}}　
-    \end{tabular} } \\
-   \typedate √ 学术学位      \hspace{1.0cm}  □ 专业学位\\
-    \vspace*{1.2cm}
-    \typedate \@cdate
-    }
+%    {\typexingming \hspace*{-5.8cm}
+%    \begin{tabular}{lp{10cm}}
+%    中文题目： \hspace*{1mm}& {\typename \@ctitle}\\
+%    英文题目： & {\typename \@etitle}\\ 
+%    & \\
+%    一级学科： & {\typename \@firstclassmajor}\\ 
+%    二级学科： & {\typename \@secondclassmajor}\\ 
+%    论文编号： & {\typename \@thesisindex}\\ \cline{2-2}
+%    　 　 & {\hspace*{5.8cm}}　
+%    \end{tabular} } \\
+%}
+	\begin{flushleft}
+	{\typexingming
+	中文题目：{\typename \@ctitle}\\
+	英文题目：{\typename \@etitle}\\
+	~\\
+	一级学科：{\typename \@firstclassmajor}\\ 
+	二级学科：{\typename \@secondclassmajor}\\ 
+	论文编号：{\typename \@thesisindex}\\
+	}
+	\end{flushleft}}
+\vspace*{1.0cm}
+	\typedate √ 学术学位      \hspace{1.0cm}  □ 专业学位\\
+    \vspace*{2.0cm}
+    \hspace{8.0cm}\typedate \@cdate
+	\footnote{* 匿名评审的博士学位论文使用统一格式的封页；字体、字号与排版格式、幅面大小应与正式论文相同，评阅后的学位论文可重新装订，制作成正式格式论文。
+	}
+	\footnote{匿名评审的博士学位论文内容应包含以下内容：\textcircled{1}与封页统一格式的扉页；\textcircled{2}中文摘要（大约300～500字，3-5个关键词，一页为宜）；\textcircled{3}英文摘要（内容与中文摘要相同，3-5个关键词，一页为宜）；\textcircled{4}目录；\textcircled{5}正文（包括文献综述、引言、注释和结论）；\textcircled{6}参考文献；\textcircled{7}与论文相关而不带有个人色彩的学术内容的附件。注意：论文中不可包含致谢、攻读博士期间发表论文目录、随感、杂论等任何透露本文作者和导师姓名的信息。}
+\footnote{送审时，该三段脚注文字均需删除。修改在setup/COEformat.tex文件中。}
+	
     \end{center}
 
     % 封二 空白页
     \cleardoublepage
      \newpage
     \thispagestyle{empty}
-    \begin{center}
-    \vspace*{-1.2cm}
-    {\typetitleen
-    \begin{center} { \@etitle} \end{center}}
-    \vspace*{1.8cm}
-    {\typeenglish
-    Dissertation Submitted to \\
-    \textbf{Peking University} \\
-    \vspace*{0.6cm}
-    \textbf{In partial fulfillment of the requirements for the degree of} \\
-    \@edegree \\
-    \vspace*{2cm}
-    By \\
-    \textbf{\@eauthor}\textbf{\@exuewei}
-    \\
-    \textbf{(\@esubject)} \\}
-    \vspace*{0.8cm}
-    {\typeenglishlarge
-     Dissertation Supervisor: \textbf{\@esupervisor} \\ \quad \\
-    Department of \@edepartment \\
-    College of Engineering \\
-    Peking University \\
-    \@edate, Beijing \\}
-    \end{center}
+%    \begin{center}
+%    \vspace*{-1.2cm}
+%    {\typetitleen
+%    \begin{center} { \@etitle} \end{center}}
+%    \vspace*{1.8cm}
+%    {\typeenglish 
+%    Dissertation Submitted to \\
+%    \textbf{Peking University} \\
+%    \vspace*{0.6cm}
+%    \textbf{In partial fulfillment of the requirements for the degree of} \\
+%    \@edegree \\
+%    \vspace*{2cm} 
+%    By \\
+%    \textbf{\@eauthor , Doctor Candidate} \\
+%    \textbf{(\@esubject)} \\}
+%    \vspace*{0.8cm}
+%    {\typeenglishlarge
+%     Dissertation Supervisor: \textbf{\@esupervisor} \\ \quad \\
+%    Department of \@edepartment \\
+%    College of Engineering \\
+%    Peking University \\
+%    \@edate, Beijing \\} 
+%    \end{center}
 
     \cleardoublepage
      \newpage
@@ -524,21 +545,21 @@
 %    \chapter*{ABSTRACT}
     %\addcontentsline{toc}{chapter}{\hei Abstract} %陈立洋注释掉：2014年5月学院要求，目录从第一章开始，不包含摘要
     \markboth{\typeyemeien ABSTRACT}{\typeyemeien ABSTRACT}%张宏剑去掉
-    %\vspace*{-5mm}
-   \begin{center}
-    {
-  %  \typetitleab
-    \begin{center} 
-    % {\@etitle}
-    \end{center}}
-   % \vspace*{8mm}
-    %{\typetext
-   % \@eauthor\ (\@esubject) \\
-    %Directed by \@esupervisor \\[3mm] }
-    {\typeab \textbf{ABSTRACT}}
-    \end{center}
-    \vspace*{-2mm}
-    \typetext
+    \vspace*{-5mm}
+    \begin{center}
+    {\typetitleab
+    \begin{center}
+      {\@etitle}
+\end{center}}
+    \vspace*{8mm} 
+%    {\typetext 
+%    \@eauthor\ (\@esubject) \\
+%    Directed by \@esupervisor \\[3mm] } 
+%   {
+%\typeab \textbf{ABSTRACT}}
+   \end{center}
+%   \vspace*{-2mm}
+%    \typetext
     \@eabstract
 %    \noindent {\textbf{Key Words:}} \quad \@ekeywords
     \cleardoublepage
@@ -553,4 +574,4 @@
 
 %\oddsidemargin 0.9em
 
-\setlength{\multlinegap}{0mm}
+\setlength{\multlinegap}{0mm} 
