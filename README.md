@@ -2,6 +2,7 @@
 # 北京大学工学院博士学位论文LaTeX模板
 
 这是一个用于撰写北京大学博士学位论文的 LaTeX 模板项目。此模板基于北京大学工程学院的博士毕业论文模板：https://www.coe.pku.edu.cn/service/biyedb/11187.html 。
+
 <img width="498" height="710" alt="image" src="https://github.com/user-attachments/assets/b641da6b-f763-4be2-8d58-40614741a400" />
 
 
