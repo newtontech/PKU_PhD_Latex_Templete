@@ -1,6 +1,7 @@
 ---
-name: project-file-map-skill
+name: project-file-map
 description: Build a read-only inventory of manuscript files, figures, tables, notebooks, scripts, logs, raw and processed data, supplementary information, references, and author notes before scientific manuscript revision. Use when evidence sources must be discovered before editing a paper.
+argument-hint: [project-root]
 ---
 
 # Project File Map Skill

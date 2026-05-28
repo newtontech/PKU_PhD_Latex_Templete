@@ -1,6 +1,7 @@
 ---
-name: claim-evidence-map-skill
+name: claim-evidence-map
 description: Map manuscript claims to concrete evidence from experiment files, figures, tables, code outputs, logs, supplementary material, author notes, or verified references. Use before revising scientific claims, novelty statements, abstracts, conclusions, captions, or reviewer responses.
+argument-hint: [tex-file-or-directory]
 ---
 
 # Claim Evidence Map Skill

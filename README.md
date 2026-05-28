@@ -1,68 +1,116 @@
+# PKU PhD LaTeX Template with Evidence-Bound Revision Skills
 
-# 北京大学工学院博士学位论文LaTeX模板
+北京大学工学院博士学位论文 LaTeX 模板，集成学术规范修订 Skill Pack。
 
-这是一个用于撰写北京大学博士学位论文的 LaTeX 模板项目。此模板基于北京大学工程学院的博士毕业论文模板：https://www.coe.pku.edu.cn/service/biyedb/11187.html 。
+A PKU College of Engineering PhD thesis LaTeX template with an integrated evidence-bound revision skill pack for Claude Code and Codex.
 
-<img width="498" height="710" alt="image" src="https://github.com/user-attachments/assets/b641da6b-f763-4be2-8d58-40614741a400" />
+## Quick Start
 
+```bash
+git clone <repository_url>
+cd PKU_PhD_Latex_Templete
 
-## 项目结构
+# Compile thesis
+xelatex COEmain.tex && bibtex COEmain && xelatex COEmain.tex && xelatex COEmain.tex
+```
 
-本项目包含两个主要的 Git 分支，以适应不同的需求：
+Skills are self-discovering — Claude Code reads `CLAUDE.md` on startup, which maps user requests to `skills/*/SKILL.md`. No setup script needed.
 
-*   **`main` 分支**:
-    此分支包含完整的博士学位论文模板，适用于论文的常规撰写和排版，包括所有作者相关信息、致谢、附录中的补充材料（如个人发表列表、简介）等。
+## Project Structure
 
-*   **`double-blind` 分支**:
-    此分支是为双盲评审目的而设计的精简版本。它移除了所有可能暴露作者身份的信息，如致谢、个人发表列表以及其他身份识别内容，并可能替换了封面文件。在需要提交论文进行匿名评审时，应切换到此分支。
+```
+PKU_PhD_Latex_Templete/
+├── COEmain.tex                    # Main thesis file (ctexbook)
+├── CLAUDE.md                      # Claude Code instructions + skill routing
+├── AGENTS.md                      # Codex + LaTeX formatting guide
+│
+├── preface/                       # Cover, abstract
+├── body/                          # Chapters, bibliography
+├── appendix/                      # Publications, acknowledgements
+├── figures/                       # Images
+├── setup/                         # LaTeX format and package settings
+│
+├── skills/                        # 19 revision skills
+│   ├── README.md                  # Skill catalog
+│   ├── paper-revision-orchestrator/
+│   ├── paper-compilation/
+│   ├── ... (see skills/README.md)
+│   └── shared/                    # Schemas, templates, references
+│
+├── .claude/settings.local.json    # Claude Code permissions
+├── .codex/AGENTS.md               # Codex integration (symlink)
+└── revision_outputs/              # Revision artifacts output
+```
 
-## 如何使用
+## Branches
 
-1.  **克隆仓库**:
-    首先，将本 Git 仓库克隆到您的本地机器。
-    ```bash
-    git clone <repository_url> # 替换为您的仓库URL
-    cd <repository_directory>
-    ```
+- **`main`**: Complete thesis template with all personal information
+- **`double-blind`**: Anonymized version for blind review (no acknowledgements, publications, or identifying info)
 
-2.  **切换分支**:
-    根据您的需求切换到相应的分支。
-    *   **常规撰写**:
-        ```bash
-        git checkout main
-        ```
-    *   **双盲评审**:
-        ```bash
-        git checkout double-blind
-        ```
+## Dual-Agent Support
 
-## Git 忽略文件 (`.gitignore`)
+| Feature | Claude Code | Codex |
+|---------|------------|-------|
+| Instructions | `CLAUDE.md` | `AGENTS.md` |
+| Skills | `skills/*/SKILL.md` (routed via CLAUDE.md) | `skills/*/SKILL.md` |
+| Configuration | `.claude/settings.local.json` | `.codex/AGENTS.md` |
 
-项目根目录下的 `.gitignore` 文件配置了忽略以下类型的文件，这些文件通常是 LaTeX 编译过程中生成的中间文件或操作系统特有的文件，不应被版本控制：
+## Available Skills
 
-*   macOS 系统文件 (例如 `.DS_Store`)
-*   LaTeX 编译生成的辅助文件 (例如 `.aux`, `.log`, `.out`, `.toc`, `.blg`, `.bbl`, `.synctex.gz` 等)
+### Core Pipeline
+| Skill | Purpose |
+|-------|---------|
+| paper-revision-orchestrator | Top-level revision coordinator |
+| project-file-map | Inventory all project files |
+| claim-evidence-map | Map claims to evidence |
+| results-consistency | Check numerical consistency |
+| paper-evidence-verifier | Verify evidence chains |
 
-## 文件列表
+### Quality Assurance
+| Skill | Purpose |
+|-------|---------|
+| citation-verification-gate | Validate all citations |
+| unsupported-claim-deletion | Remove unsupported claims |
+| methods-reproducibility | Audit reproducibility |
+| materials-science-style | Domain style conventions |
+| manuscript-autorater | 6-axis quality scoring |
+| multi-reviewer-audit | 5-perspective peer review |
+| submission-qa-gate | Pre-submission checklist |
 
-主要文件和目录包括：
+### Output & Compilation
+| Skill | Purpose |
+|-------|---------|
+| paper-compilation | Compile LaTeX, fix errors |
+| latex-docx-diff | Generate reviewable diffs |
+| paper-redline-diff | Redline PDF for review |
 
-*   `COEmain.tex`: 论文主文件。
-*   `preface/`: 包含封面、摘要等前言部分。
-*   `body/`: 包含论文正文的章节文件和参考文献。
-*   `appendix/`: 包含附录内容。
-*   `figures/`: 存放论文中使用的图片。
-*   `setup/`: 包含 LaTeX 格式和宏包设置。
-*   `.gitignore`: Git 忽略文件配置。
+### Infrastructure
+| Skill | Purpose |
+|-------|---------|
+| experiment-folder-indexer | Build evidence ledger |
+| experiment-log-aggregator | Consolidate experiment records |
+| latex-structure-refactor | Reorganize LaTeX structure |
 
-## 论文修订 Skill Pack
+## Design Principles
 
-本仓库新增了一个面向科学论文修订的 skill pack 设计文档：
+1. **Evidence-bound**: Every scientific claim maps to real experiment evidence
+2. **No fabrication**: Never invent data, results, citations, or experiments
+3. **Human decision points**: Uncertain edits become TODO items, not silent rewrites
+4. **Reviewable output**: All edits traceable via diffs and evidence IDs
+5. **Small composable skills**: Each skill solves one problem; orchestrator coordinates
 
-*   [`skills/evidence-bound-scientific-manuscript-revision/README.md`](skills/evidence-bound-scientific-manuscript-revision/README.md)
+## Source Projects
 
-该 skill pack 采用 evidence-bound revision 原则：先把论文 claim 映射到实验文件、图表、代码输出、日志、补充材料和已核验文献，再做结构、方法、结果一致性和可审查 diff。它参考了多个公开 GitHub academic skills/agents 项目的模块化思想，包括 [Imbad0202/academic-research-skills](https://github.com/Imbad0202/academic-research-skills)、[andrehuang/academic-writing-agents](https://github.com/andrehuang/academic-writing-agents)、[lishix520/academic-paper-skills](https://github.com/lishix520/academic-paper-skills)、[SNL-UCSB/paper-writing-skill](https://github.com/SNL-UCSB/paper-writing-skill)、[PaperDebugger/paperdebugger](https://github.com/PaperDebugger/paperdebugger) 和 [K-Dense-AI/scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills)。本仓库只借鉴其工作流思想，不复制上游正文、脚本或 agent 配置；论文事实、实验结果和学术判断仍由作者负责。
+This skill pack draws patterns from open-source academic writing projects:
 
----
+| Project | License | What We Borrow |
+|---------|---------|---------------|
+| [Research-Equality/RE-paper-writing](https://github.com/Research-Equality/RE-paper-writing) | MIT | SKILL.md format, compilation/diff/verification patterns |
+| [Ar9av/PaperOrchestra](https://github.com/Ar9av/PaperOrchestra) | MIT | 4-phase experiment aggregation, autorater scoring, halt rules |
+| [Imbad0202/academic-research-skills](https://github.com/Imbad0202/academic-research-skills) | CC BY-NC 4.0 | Multi-reviewer audit, checkpoint pipeline (concepts only) |
 
-祝您论文撰写顺利！
+This repository borrows workflow patterns and design ideas only. It does not copy upstream source code, scripts, or agent configurations. Academic content responsibility remains with the thesis author.
+
+## LaTeX Template Credits
+
+Based on the PKU College of Engineering PhD thesis template: https://www.coe.pku.edu.cn/service/biyedb/11187.html

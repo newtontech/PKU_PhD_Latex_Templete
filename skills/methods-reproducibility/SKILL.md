@@ -1,6 +1,7 @@
 ---
-name: methods-reproducibility-skill
+name: methods-reproducibility
 description: Audit and enrich scientific manuscript methods using only real experiment records, scripts, logs, notebooks, metadata, instruments, software versions, data splits, seeds, and author notes. Use when method details must be made reproducible without fabricating parameters.
+argument-hint: [tex-file-or-directory]
 ---
 
 # Methods Reproducibility Skill

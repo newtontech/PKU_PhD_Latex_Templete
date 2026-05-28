@@ -1,6 +1,7 @@
 ---
-name: latex-docx-diff-skill
+name: latex-docx-diff
 description: Produce reviewable manuscript revision artifacts for LaTeX and DOCX, including patches, latexdiff output, tracked-change boundaries, comments, and human decision checklists. Use after evidence-bound edits have been planned and accepted.
+argument-hint: [original-tex revised-tex]
 ---
 
 # LaTeX DOCX Diff Skill

@@ -1,6 +1,7 @@
 ---
-name: paper-revision-orchestrator-skill
+name: paper-revision-orchestrator
 description: Orchestrate evidence-bound scientific manuscript revision across file mapping, claim-evidence mapping, structure, methods reproducibility, results consistency, and reviewable diff generation. Use when revising a scientific manuscript from LaTeX or DOCX together with experiment folders, figures, tables, logs, references, or reviewer comments.
+argument-hint: [tex-file-or-directory]
 ---
 
 # Paper Revision Orchestrator

@@ -1,6 +1,7 @@
 ---
-name: section-architecture-skill
+name: section-architecture
 description: Reorganize scientific manuscript sections according to IMRaD, thesis, or target-journal structure while preserving evidence-bound claims, labels, citations, equations, and figure/table references. Use after claim and result audits have established what the evidence supports.
+argument-hint: [tex-file-or-directory]
 ---
 
 # Section Architecture Skill

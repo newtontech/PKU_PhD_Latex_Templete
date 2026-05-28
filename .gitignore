@@ -20,3 +20,7 @@
 *.lot
 *.lof
 COEmain.synctex(busy)
+
+# Revision outputs (keep directory structure)
+revision_outputs/*
+!revision_outputs/.gitkeep

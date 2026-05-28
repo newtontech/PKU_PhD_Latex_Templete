@@ -1,6 +1,7 @@
 ---
-name: results-consistency-skill
+name: results-consistency
 description: Audit consistency among manuscript text, numerical results, figures, tables, captions, supplementary information, code outputs, logs, and processed result files. Use before revising results, abstracts, captions, conclusions, or reviewer responses.
+argument-hint: [tex-file-or-directory]
 ---
 
 # Results Consistency Skill
