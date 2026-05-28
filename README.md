@@ -55,6 +55,14 @@
 *   `setup/`: 包含 LaTeX 格式和宏包设置。
 *   `.gitignore`: Git 忽略文件配置。
 
+## 论文修订 Skill Pack
+
+本仓库新增了一个面向科学论文修订的 skill pack 设计文档：
+
+*   [`skills/evidence-bound-scientific-manuscript-revision/README.md`](skills/evidence-bound-scientific-manuscript-revision/README.md)
+
+该 skill pack 采用 evidence-bound revision 原则：先把论文 claim 映射到实验文件、图表、代码输出、日志、补充材料和已核验文献，再做结构、方法、结果一致性和可审查 diff。它参考了多个公开 GitHub academic skills/agents 项目的模块化思想，包括 [Imbad0202/academic-research-skills](https://github.com/Imbad0202/academic-research-skills)、[andrehuang/academic-writing-agents](https://github.com/andrehuang/academic-writing-agents)、[lishix520/academic-paper-skills](https://github.com/lishix520/academic-paper-skills)、[SNL-UCSB/paper-writing-skill](https://github.com/SNL-UCSB/paper-writing-skill)、[PaperDebugger/paperdebugger](https://github.com/PaperDebugger/paperdebugger) 和 [K-Dense-AI/scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills)。本仓库只借鉴其工作流思想，不复制上游正文、脚本或 agent 配置；论文事实、实验结果和学术判断仍由作者负责。
+
 ---
 
 祝您论文撰写顺利！
